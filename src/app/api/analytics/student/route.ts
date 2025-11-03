@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyAuth } from '@/lib/auth';
-import fs from 'fs';
-import path from 'path';
+import { getConversations, getMessages } from '@/lib/db';
 
 interface StudentAnalyticsData {
   total_conversations: number;
@@ -45,65 +44,52 @@ export async function GET(request: NextRequest) {
     const url = new URL(request.url);
     const range = url.searchParams.get('range') || '7d';
     
-    // Get student's conversation data
-    const conversationsDir = path.join(process.cwd(), 'data', 'conversations');
-    let conversationFiles: string[] = [];
-    
-    try {
-      conversationFiles = fs.readdirSync(conversationsDir).filter(file => file.endsWith('.json'));
-    } catch (error) {
-      console.log('Conversations directory not found, using mock data');
-    }
-
+    // Fetch student's conversations from the configured DB (MongoDB or SQLite)
     let studentConversations: any[] = [];
     let totalMessages = 0;
     let stressScores: number[] = [];
     let emotions: { [key: string]: number } = {};
     let dailyActivity: { [key: string]: { stress: number[], count: number } } = {};
 
-    // Process conversation files to extract analytics for this student
-    for (const file of conversationFiles) {
-      try {
-        const filePath = path.join(conversationsDir, file);
-        const conversationData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-        
-        // Check if this conversation belongs to the current student
-        if (conversationData.anon_id === user.anon_id) {
-          studentConversations.push(conversationData);
-          console.log(`Processing conversation: ${conversationData.conversation_id}, Messages: ${conversationData.messages ? conversationData.messages.length : 0}`);
-          
-          // Process messages for analytics
-          if (conversationData.messages && conversationData.messages.length > 0) {
-            totalMessages += conversationData.messages.length;
-            
-            conversationData.messages.forEach((message: any) => {
-              if (message.sender === 'student' && message.metadata?.stress_score) {
-                stressScores.push(message.metadata.stress_score);
-                
-                // Group by date
-                const date = new Date(message.timestamp).toISOString().split('T')[0];
-                if (!dailyActivity[date]) {
-                  dailyActivity[date] = { stress: [], count: 0 };
-                }
-                dailyActivity[date].stress.push(message.metadata.stress_score);
-                dailyActivity[date].count++;
+    try {
+      const convs = await getConversations(user.anon_id);
+      // getConversations returns array of conversations for anon_id
+      studentConversations = convs || [];
+
+      for (const conv of studentConversations) {
+        // fetch messages for conversation from DB
+        const messages = await getMessages(conv.id || conv.id?.toString());
+        if (!messages || messages.length === 0) continue;
+
+        totalMessages += messages.length;
+
+        for (const message of messages) {
+          if (message.sender === 'student' && (message.stress_score || message.stress_score === 0 || message.metadata?.stress_score)) {
+            const score = message.stress_score ?? message.metadata?.stress_score ?? null;
+            if (typeof score === 'number') stressScores.push(score);
+
+            const ts = message.timestamp ? new Date(message.timestamp * 1000) : new Date();
+            const date = ts.toISOString().split('T')[0];
+            if (!dailyActivity[date]) dailyActivity[date] = { stress: [], count: 0 };
+            if (typeof score === 'number') dailyActivity[date].stress.push(score);
+            dailyActivity[date].count++;
+          }
+
+          // Extract emotions from message tags/metadata
+          const detected = message.tags || message.metadata?.detected_keywords || [];
+          if (Array.isArray(detected)) {
+            for (const keyword of detected) {
+              const k = String(keyword).toLowerCase();
+              const emotionWords = ['anxious', 'stressed', 'sad', 'worried', 'frustrated', 'angry', 'depressed', 'happy', 'excited', 'calm', 'confident', 'optimistic', 'overwhelmed', 'nervous', 'panicking'];
+              if (emotionWords.includes(k)) {
+                emotions[k] = (emotions[k] || 0) + 1;
               }
-              
-              // Extract emotions from keywords if available
-              if (message.metadata?.detected_keywords) {
-                message.metadata.detected_keywords.forEach((keyword: string) => {
-                  const emotionWords = ['anxious', 'stressed', 'sad', 'worried', 'frustrated', 'angry', 'depressed', 'happy', 'excited', 'calm', 'confident', 'optimistic', 'overwhelmed', 'nervous', 'panicking'];
-                  if (emotionWords.includes(keyword.toLowerCase())) {
-                    emotions[keyword.toLowerCase()] = (emotions[keyword.toLowerCase()] || 0) + 1;
-                  }
-                });
-              }
-            });
+            }
           }
         }
-      } catch (error) {
-        console.error(`Error processing conversation file ${file}:`, error);
       }
+    } catch (e) {
+      console.error('Error fetching conversations/messages from DB:', e);
     }
 
     // Calculate analytics
