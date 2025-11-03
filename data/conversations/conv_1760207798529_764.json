@@ -1,0 +1,119 @@
+{
+  "conversation_id": "conv_1760207798529_764",
+  "anon_id": "ANON-1001",
+  "title": "Feeling overwhelmed lately",
+  "created_at": "2025-10-11T18:36:38.529Z",
+  "last_message": "Thank you for sharing that with me. I'm here to listen and support you. It takes courage to reach out, and I want you to know that your feelings are valid. Can you tell me more about how this is affecting you?",
+  "last_snippet": "Thank you for sharing that with me. I'm here to li...",
+  "mood_pulse": "yellow",
+  "unread": true,
+  "last_stress_score": 65,
+  "messages": [
+    {
+      "id": "msg_1760208383486_491",
+      "sender": "student",
+      "text": "I'm feeling overwhelmed with everything lately. Between assignments, exams, and trying to maintain a social life, I feel like I'm drowning.",
+      "timestamp": "2025-10-11T18:46:23.486Z",
+      "metadata": {
+        "stress_score": 75,
+        "detected_keywords": ["overwhelmed", "assignments", "exams", "drowning"]
+      }
+    },
+    {
+      "id": "msg_1760208383490_303",
+      "sender": "mindmate",
+      "text": "I hear how much you're carrying right now, and it sounds really overwhelming. It's completely understandable to feel this way when juggling so many responsibilities. Let's break this down together - what feels like the most pressing concern right now?",
+      "timestamp": "2025-10-11T18:46:25.489Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "validate_and_prioritize",
+        "confidence": 0.88,
+        "processing_agents": [
+          "Mood Analyzer",
+          "Wellness Planner"
+        ],
+        "suggested_resource_ids": ["stress_management", "time_management"],
+        "tags": [
+          "overwhelm",
+          "prioritization",
+          "validation"
+        ],
+        "escalation_required": false
+      }
+    },
+    {
+      "id": "msg_1760208391907_591",
+      "sender": "student",
+      "text": "I think it's the upcoming database project deadline. I've been procrastinating and now I'm panicking about not having enough time.",
+      "timestamp": "2025-10-11T18:46:31.907Z",
+      "metadata": {
+        "stress_score": 80,
+        "detected_keywords": ["database project", "deadline", "procrastinating", "panicking", "not enough time"]
+      }
+    },
+    {
+      "id": "msg_1760208391910_847",
+      "sender": "mindmate",
+      "text": "Procrastination often happens when we feel overwhelmed by a task's size or complexity. The good news is that you're recognizing this pattern now. Let's create a manageable plan: break the project into smaller, specific tasks. What are the main components you need to complete?",
+      "timestamp": "2025-10-11T18:46:33.909Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "provide_structure_and_support",
+        "confidence": 0.85,
+        "processing_agents": [
+          "Academic Support",
+          "Task Management"
+        ],
+        "suggested_resource_ids": ["project_planning", "procrastination_help"],
+        "tags": [
+          "procrastination",
+          "task_breakdown",
+          "academic_support"
+        ],
+        "escalation_required": false
+      }
+    },
+    {
+      "id": "msg_1760208391912_001",
+      "sender": "student",
+      "text": "I need to design the database schema, implement the queries, and write a report. The schema part is what's really intimidating me.",
+      "timestamp": "2025-10-11T18:47:00.000Z",
+      "metadata": {
+        "stress_score": 70,
+        "detected_keywords": ["database schema", "implement queries", "write report", "intimidating"]
+      }
+    },
+    {
+      "id": "msg_1760208391913_001",
+      "sender": "mindmate",
+      "text": "Great! You've identified the specific challenge. Database schema design can feel daunting, but let's make it manageable. Start with identifying your entities (like User, Order, Product), then define their relationships. I can share some resources that break this down step-by-step. Would that help?",
+      "timestamp": "2025-10-11T18:47:30.000Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "provide_specific_guidance",
+        "confidence": 0.90,
+        "processing_agents": [
+          "Academic Support",
+          "Technical Guide"
+        ],
+        "suggested_resource_ids": ["database_design", "schema_tutorial"],
+        "tags": [
+          "database_design",
+          "technical_support",
+          "step_by_step"
+        ],
+        "escalation_required": false
+      }
+    },
+    {
+      "id": "msg_1760208391914_001",
+      "sender": "student",
+      "text": "Yes, that would be really helpful. I feel a bit better knowing there's a structured approach to this.",
+      "timestamp": "2025-10-11T18:48:00.000Z",
+      "metadata": {
+        "stress_score": 65,
+        "detected_keywords": ["helpful", "feel better", "structured approach"]
+      }
+    }
+  ]
+}

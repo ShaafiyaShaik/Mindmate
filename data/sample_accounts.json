@@ -1,0 +1,14 @@
+{
+  "users": [
+    {"username":"stu_ajay","password":"pass123","role":"student","anon_id":"ANON-1001","dept":"CSE","year":2},
+    {"username":"stu_neha","password":"pass123","role":"student","anon_id":"ANON-1002","dept":"ECE","year":3},
+    {"username":"stu_rahul","password":"pass123","role":"student","anon_id":"ANON-1003","dept":"ME","year":1},
+    {"username":"stu_priya","password":"pass123","role":"student","anon_id":"ANON-1004","dept":"IT","year":4},
+    {"username":"stu_kiran","password":"pass123","role":"student","anon_id":"ANON-1005","dept":"EEE","year":2},
+    {"username":"counsel_alice","password":"counsel123","role":"counselor","anon_id":"CN-2001","dept":"CSE"},
+    {"username":"counsel_bob","password":"counsel123","role":"counselor","anon_id":"CN-2002","dept":"All"},
+    {"username":"counsel_maria","password":"counsel123","role":"counselor","anon_id":"CN-2003","dept":"ECE"},
+    {"username":"admin_jaya","password":"admin123","role":"admin","anon_id":"ADM-3001"},
+    {"username":"admin_dev","password":"admin123","role":"admin","anon_id":"ADM-3002"}
+  ]
+}

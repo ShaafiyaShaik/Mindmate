@@ -1,0 +1,98 @@
+{
+  "conversation_id": "conv_1760208500000_002",
+  "anon_id": "ANON-1001",
+  "title": "Anxiety about social situations",
+  "created_at": "2025-10-07T16:30:00.000Z",
+  "last_message": "I feel more confident about trying those techniques. Thank you for listening and understanding.",
+  "last_snippet": "I feel more confident about trying those techniques...",
+  "mood_pulse": "yellow",
+  "unread": false,
+  "last_stress_score": 45,
+  "messages": [
+    {
+      "id": "msg_1760208500001_001",
+      "sender": "student",
+      "text": "I've been feeling really anxious about group presentations and social interactions lately. It's affecting my participation in class.",
+      "timestamp": "2025-10-07T16:30:00.000Z",
+      "metadata": {
+        "stress_score": 68,
+        "detected_keywords": ["anxious", "group presentations", "social interactions", "affecting"]
+      }
+    },
+    {
+      "id": "msg_1760208500001_002",
+      "sender": "mindmate",
+      "text": "Social anxiety around presentations is very common, especially among students. It's brave of you to recognize this and seek support. Can you tell me what specifically about these situations makes you feel most anxious?",
+      "timestamp": "2025-10-07T16:31:00.000Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "validate_and_explore",
+        "confidence": 0.87,
+        "processing_agents": ["Anxiety Specialist", "Social Support"],
+        "suggested_resource_ids": ["social_anxiety_guide", "presentation_tips"],
+        "tags": ["social_anxiety", "presentations", "validation"],
+        "escalation_required": false
+      }
+    },
+    {
+      "id": "msg_1760208500001_003",
+      "sender": "student",
+      "text": "I worry that people will judge me if I say something wrong or if my voice shakes. Sometimes I feel like everyone is staring at me.",
+      "timestamp": "2025-10-07T16:32:00.000Z",
+      "metadata": {
+        "stress_score": 72,
+        "detected_keywords": ["worry", "judge", "wrong", "voice shakes", "staring"]
+      }
+    },
+    {
+      "id": "msg_1760208500001_004",
+      "sender": "mindmate",
+      "text": "Those feelings are completely understandable. Many people experience similar thoughts. Here's a helpful technique: before presenting, try the 5-4-3-2-1 grounding method - notice 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, and 1 you can taste. This helps calm your nervous system.",
+      "timestamp": "2025-10-07T16:33:00.000Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "provide_coping_strategy",
+        "confidence": 0.91,
+        "processing_agents": ["Anxiety Specialist", "Coping Strategies"],
+        "suggested_resource_ids": ["grounding_techniques", "anxiety_management"],
+        "tags": ["grounding_technique", "anxiety_relief", "practical_advice"],
+        "escalation_required": false
+      }
+    },
+    {
+      "id": "msg_1760208500001_005",
+      "sender": "student",
+      "text": "That sounds helpful. Are there any other techniques I can try?",
+      "timestamp": "2025-10-07T16:34:00.000Z",
+      "metadata": {
+        "stress_score": 58,
+        "detected_keywords": ["helpful", "other techniques"]
+      }
+    },
+    {
+      "id": "msg_1760208500001_006",
+      "sender": "mindmate",
+      "text": "Absolutely! Try progressive muscle relaxation - tense and release each muscle group for 5 seconds, starting from your toes up to your head. Also, remember that most people are focused on themselves, not judging you. Practice positive self-talk: 'I have valuable ideas to share' instead of 'I'll mess up'.",
+      "timestamp": "2025-10-07T16:35:00.000Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "provide_additional_strategies",
+        "confidence": 0.89,
+        "processing_agents": ["Wellness Planner", "Cognitive Therapy"],
+        "suggested_resource_ids": ["muscle_relaxation", "positive_self_talk"],
+        "tags": ["muscle_relaxation", "cognitive_reframing", "self_talk"],
+        "escalation_required": false
+      }
+    },
+    {
+      "id": "msg_1760208500001_007",
+      "sender": "student",
+      "text": "I feel more confident about trying those techniques. Thank you for listening and understanding.",
+      "timestamp": "2025-10-07T16:36:00.000Z",
+      "metadata": {
+        "stress_score": 45,
+        "detected_keywords": ["confident", "thank you", "listening", "understanding"]
+      }
+    }
+  ]
+}

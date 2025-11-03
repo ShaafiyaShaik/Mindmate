@@ -1,0 +1,74 @@
+{
+  "total_conversations": 127,
+  "active_students": 45,
+  "avg_stress_score": 58.3,
+  "crisis_alerts": 8,
+  "emotion_distribution": {
+    "anxious": 32,
+    "stressed": 28,
+    "sad": 15,
+    "worried": 22,
+    "frustrated": 18,
+    "angry": 8,
+    "depressed": 12
+  },
+  "stress_trends": [
+    {
+      "date": "2025-10-05",
+      "avg_stress": 62.5,
+      "conversation_count": 18
+    },
+    {
+      "date": "2025-10-06", 
+      "avg_stress": 58.3,
+      "conversation_count": 22
+    },
+    {
+      "date": "2025-10-07",
+      "avg_stress": 55.8,
+      "conversation_count": 19
+    },
+    {
+      "date": "2025-10-08",
+      "avg_stress": 60.2,
+      "conversation_count": 24
+    },
+    {
+      "date": "2025-10-09",
+      "avg_stress": 57.1,
+      "conversation_count": 20
+    },
+    {
+      "date": "2025-10-10",
+      "avg_stress": 63.4,
+      "conversation_count": 16
+    },
+    {
+      "date": "2025-10-11",
+      "avg_stress": 59.7,
+      "conversation_count": 21
+    }
+  ],
+  "department_breakdown": {
+    "Computer Science": {
+      "students": 45,
+      "avg_stress": 62.3
+    },
+    "Engineering": {
+      "students": 38,
+      "avg_stress": 58.7
+    },
+    "Business": {
+      "students": 32,
+      "avg_stress": 51.2
+    },
+    "Arts": {
+      "students": 28,
+      "avg_stress": 47.8
+    },
+    "Sciences": {
+      "students": 41,
+      "avg_stress": 55.9
+    }
+  }
+}

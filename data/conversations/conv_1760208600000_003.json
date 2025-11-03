@@ -1,0 +1,88 @@
+{
+  "conversation_id": "conv_1760208600000_003",
+  "anon_id": "ANON-1001",
+  "title": "Feeling better today",
+  "created_at": "2025-10-09T10:15:00.000Z",
+  "last_message": "I'm glad to hear you're feeling better! Keep practicing those techniques we discussed.",
+  "last_snippet": "I'm glad to hear you're feeling better!...",
+  "mood_pulse": "green",
+  "unread": false,
+  "last_stress_score": 35,
+  "messages": [
+    {
+      "id": "msg_1760208600001_001",
+      "sender": "student",
+      "text": "Hey! I wanted to update you - I tried the breathing exercises before my presentation yesterday and they really helped!",
+      "timestamp": "2025-10-09T10:15:00.000Z",
+      "metadata": {
+        "stress_score": 40,
+        "detected_keywords": ["update", "breathing exercises", "presentation", "helped"]
+      }
+    },
+    {
+      "id": "msg_1760208600001_002",
+      "sender": "mindmate",
+      "text": "That's wonderful to hear! I'm so proud of you for putting those techniques into practice. How did the presentation go overall?",
+      "timestamp": "2025-10-09T10:16:00.000Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "celebrate_progress",
+        "confidence": 0.92,
+        "processing_agents": ["Progress Tracker", "Encouragement"],
+        "suggested_resource_ids": [],
+        "tags": ["celebration", "progress", "encouragement"],
+        "escalation_required": false
+      }
+    },
+    {
+      "id": "msg_1760208600001_003",
+      "sender": "student",
+      "text": "It went much better than expected! I still felt nervous but I was able to get through it without panicking. My classmates even asked good questions.",
+      "timestamp": "2025-10-09T10:17:00.000Z",
+      "metadata": {
+        "stress_score": 35,
+        "detected_keywords": ["better than expected", "nervous", "get through", "without panicking", "good questions"]
+      }
+    },
+    {
+      "id": "msg_1760208600001_004",
+      "sender": "mindmate",
+      "text": "That's fantastic progress! You're building confidence and developing coping skills. The fact that your classmates engaged with questions shows your presentation was engaging. How are you feeling about future presentations now?",
+      "timestamp": "2025-10-09T10:18:00.000Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "reinforce_progress",
+        "confidence": 0.94,
+        "processing_agents": ["Progress Tracker", "Confidence Builder"],
+        "suggested_resource_ids": ["confidence_building"],
+        "tags": ["progress_reinforcement", "confidence", "future_planning"],
+        "escalation_required": false
+      }
+    },
+    {
+      "id": "msg_1760208600001_005",
+      "sender": "student",
+      "text": "I feel more optimistic about them. I think I'm starting to realize that most people aren't really judging me as harshly as I thought.",
+      "timestamp": "2025-10-09T10:19:00.000Z",
+      "metadata": {
+        "stress_score": 30,
+        "detected_keywords": ["optimistic", "realize", "not judging", "harshly"]
+      }
+    },
+    {
+      "id": "msg_1760208600001_006",
+      "sender": "mindmate",
+      "text": "I'm glad to hear you're feeling better! Keep practicing those techniques we discussed. You're developing great self-awareness and coping skills. Remember, progress isn't always linear, but you're definitely moving in the right direction!",
+      "timestamp": "2025-10-09T10:20:00.000Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "encourage_continued_practice",
+        "confidence": 0.91,
+        "processing_agents": ["Wellness Planner", "Encouragement"],
+        "suggested_resource_ids": ["mindfulness_practice", "self_awareness"],
+        "tags": ["encouragement", "practice_reminder", "progress_validation"],
+        "escalation_required": false
+      }
+    }
+  ]
+}

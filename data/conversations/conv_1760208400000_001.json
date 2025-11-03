@@ -1,0 +1,98 @@
+{
+  "conversation_id": "conv_1760208400000_001",
+  "anon_id": "ANON-1001",
+  "title": "Feeling overwhelmed with exams",
+  "created_at": "2025-10-05T14:20:00.000Z",
+  "last_message": "Thank you for helping me understand that it's normal to feel stressed during exam periods. The breathing techniques you suggested really helped.",
+  "last_snippet": "Thank you for helping me understand that it's normal...",
+  "mood_pulse": "yellow",
+  "unread": false,
+  "last_stress_score": 75,
+  "messages": [
+    {
+      "id": "msg_1760208400001_001",
+      "sender": "student",
+      "text": "I'm really stressed about my upcoming exams. I feel like I'm not prepared enough and time is running out.",
+      "timestamp": "2025-10-05T14:20:00.000Z",
+      "metadata": {
+        "stress_score": 78,
+        "detected_keywords": ["stressed", "exams", "not prepared", "time running out"]
+      }
+    },
+    {
+      "id": "msg_1760208400001_002",
+      "sender": "mindmate",
+      "text": "I understand how overwhelming exam periods can feel. It's completely normal to feel stressed when facing important assessments. Let's work together to create a study plan that feels more manageable. What subjects are you most concerned about?",
+      "timestamp": "2025-10-05T14:21:00.000Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "provide_support_and_guidance",
+        "confidence": 0.85,
+        "processing_agents": ["Mood Analyzer", "Study Planner"],
+        "suggested_resource_ids": ["study_strategies", "stress_management"],
+        "tags": ["exam_stress", "study_planning"],
+        "escalation_required": false
+      }
+    },
+    {
+      "id": "msg_1760208400001_003",
+      "sender": "student",
+      "text": "Data structures and algorithms is really challenging for me. I keep getting confused with the concepts.",
+      "timestamp": "2025-10-05T14:22:00.000Z",
+      "metadata": {
+        "stress_score": 72,
+        "detected_keywords": ["challenging", "confused", "concepts"]
+      }
+    },
+    {
+      "id": "msg_1760208400001_004",
+      "sender": "mindmate",
+      "text": "Data structures can be tricky, but with the right approach, you can master them! Let me suggest some study techniques: start with visual diagrams, practice with simple examples, and break down complex problems into smaller parts. Would you like me to share some specific resources for DSA?",
+      "timestamp": "2025-10-05T14:23:00.000Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "provide_study_guidance",
+        "confidence": 0.9,
+        "processing_agents": ["Study Planner", "Academic Support"],
+        "suggested_resource_ids": ["dsa_resources", "study_techniques"],
+        "tags": ["academic_support", "study_strategies"],
+        "escalation_required": false
+      }
+    },
+    {
+      "id": "msg_1760208400001_005",
+      "sender": "student",
+      "text": "Yes, please! And maybe some breathing exercises too? I noticed my anxiety gets really bad during study sessions.",
+      "timestamp": "2025-10-05T14:24:00.000Z",
+      "metadata": {
+        "stress_score": 70,
+        "detected_keywords": ["anxiety", "breathing exercises", "study sessions"]
+      }
+    },
+    {
+      "id": "msg_1760208400001_006",
+      "sender": "mindmate",
+      "text": "Absolutely! Here's a simple breathing technique: breathe in for 4 counts, hold for 4, breathe out for 6. This activates your parasympathetic nervous system and reduces stress. Try doing this for 2-3 minutes before each study session. I'm also sharing some DSA study resources that make complex concepts easier to understand.",
+      "timestamp": "2025-10-05T14:25:00.000Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "provide_coping_strategies",
+        "confidence": 0.88,
+        "processing_agents": ["Wellness Planner", "Academic Support"],
+        "suggested_resource_ids": ["breathing_exercises", "anxiety_management", "dsa_study_guide"],
+        "tags": ["stress_relief", "breathing_techniques", "academic_support"],
+        "escalation_required": false
+      }
+    },
+    {
+      "id": "msg_1760208400001_007",
+      "sender": "student",
+      "text": "Thank you for helping me understand that it's normal to feel stressed during exam periods. The breathing techniques you suggested really helped.",
+      "timestamp": "2025-10-05T14:30:00.000Z",
+      "metadata": {
+        "stress_score": 65,
+        "detected_keywords": ["thank you", "normal", "helped"]
+      }
+    }
+  ]
+}

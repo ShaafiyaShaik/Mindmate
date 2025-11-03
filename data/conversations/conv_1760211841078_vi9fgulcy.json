@@ -1,0 +1,38 @@
+{
+  "conversation_id": "conv_1760211841078_vi9fgulcy",
+  "anon_id": "ANON-1001",
+  "title": "I'm feeling overwhelmed",
+  "created_at": "2025-10-12T10:30:41.078Z",
+  "last_message": "I understand you're feeling overwhelmed. Let's work together to find some strategies that can help you manage these feelings.",
+  "last_snippet": "I understand you're feeling overwhelmed...",
+  "mood_pulse": "red",
+  "unread": false,
+  "last_stress_score": 85,
+  "messages": [
+    {
+      "id": "msg_1760211841079_001",
+      "sender": "student",
+      "text": "I'm feeling overwhelmed",
+      "timestamp": "2025-10-12T10:30:41.079Z",
+      "metadata": {
+        "stress_score": 85,
+        "detected_keywords": ["overwhelmed"]
+      }
+    },
+    {
+      "id": "msg_1760211841080_001",
+      "sender": "mindmate",
+      "text": "I understand you're feeling overwhelmed. Let's work together to find some strategies that can help you manage these feelings. Can you tell me what's contributing to this feeling right now?",
+      "timestamp": "2025-10-12T10:31:00.000Z",
+      "metadata": {
+        "agent_response": true,
+        "intent": "validate_and_explore",
+        "confidence": 0.89,
+        "processing_agents": ["Mood Analyzer", "Crisis Support"],
+        "suggested_resource_ids": ["overwhelm_management", "stress_relief"],
+        "tags": ["overwhelm", "validation", "exploration"],
+        "escalation_required": false
+      }
+    }
+  ]
+}
